@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)file:///C:/Users/USER/Downloads/skai-studio-v2_2.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SKAI Studio – AI Product Photography, Powered by AI</title>
+<meta name="description" content="Studio-grade product photography and video, powered by AI. No photographers. No studios. 48-hour delivery.">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="./SKAI Studio – AI Product Photography, Powered by AI_files/css2" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:rgb(251,247,244);
+--fg:rgb(19,20,22);
+--muted-bg:rgb(232,223,216);
+--muted-bg-30:rgba(232,223,216,0.3);
+--muted:rgb(84,89,95);
+--card:rgb(251,247,244);
+--dark:rgb(13,13,13);
+--gold:rgb(227,175,53);
+--lavender:rgb(200,189,255);
+--silver:rgb(200,203,208);
+--border:rgba(19,20,22,0.08);
+--border-mid:hsl(220,7%,80%);
+--shadow-soft:0 4px 24px rgba(19,20,22,0.06),0 1px 4px rgba(19,20,22,0.04);
+--shadow-strong:0 12px 48px rgba(19,20,22,0.14),0 4px 12px rgba(19,20,22,0.08);
+--sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+--serif:'Playfair Display',Georgia,serif;
+--mono:'JetBrains Mono',monospace;
+--px:32px;--py:80px;--mw:1280px}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--fg);font-size:16px;line-height:1.5;overflow-x:hidden}
+.mw{max-width:var(--mw);margin:0 auto}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(251,247,244,0.92);backdrop-filter:blur(16px);border-color:var(--border)}
+.nav-inner{max-width:var(--mw);margin:0 auto;padding:0 var(--px);display:flex;align-items:center;justify-content:space-between;height:80px}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--fg);font-size:18px;font-weight:700;letter-spacing:-.36px;transition:transform .2s}
+.nav-logo:hover{transform:scale(1.03)}
+.nav-logo-icon{width:34px;height:34px;background:var(--fg);border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;color:var(--bg);font-size:17px;font-weight:700}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+.nav-links a{font-size:14px;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--fg)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.lang-btn{font-family:var(--mono);font-size:11px;font-weight:500;color:var(--muted);background:none;border:1px solid var(--border-mid);padding:6px 12px;border-radius:9999px;cursor:pointer;transition:all .2s;letter-spacing:.05em}
+.lang-btn:hover{color:var(--gold);border-color:var(--gold)}
+.btn-nav{font-size:14px;font-weight:600;color:var(--bg);background:var(--fg);text-decoration:none;padding:10px 22px;border-radius:9999px;transition:all .2s;white-space:nowrap}
+.btn-nav:hover{background:var(--gold);color:var(--fg)}
+
+/* HERO */
+.hero{padding:128px var(--px) 80px;max-width:var(--mw);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;min-height:100vh}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:var(--muted-bg);padding:6px 14px;border-radius:9999px;margin-bottom:24px}
+.eyebrow::before{content:'';width:6px;height:6px;background:var(--gold);border-radius:50%}
+h1{font-size:72px;font-weight:700;line-height:1;letter-spacing:-1.44px;margin-bottom:24px}
+h1 .serif-em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--gold)}
+.hero-sub{font-size:18px;color:var(--muted);line-height:1.65;max-width:44ch;margin-bottom:36px}
+.btns{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--fg);background:var(--gold);text-decoration:none;padding:14px 28px;border-radius:9999px;transition:all .2s;border:none;cursor:pointer}
+.btn-primary:hover{background:var(--fg);color:var(--bg);transform:translateY(-1px)}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:500;color:var(--fg);background:transparent;text-decoration:none;padding:14px 28px;border-radius:9999px;border:1px solid var(--border-mid);transition:all .2s;cursor:pointer}
+.btn-outline:hover{background:var(--muted-bg)}
+.hero-visual{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hcard{aspect-ratio:1;border-radius:24px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;transition:transform .3s}
+.hcard:hover{transform:scale(1.02)}
+.hcard:nth-child(1){background:linear-gradient(to bottom right,rgba(200,189,255,.2),rgba(200,203,208,.2),rgba(232,223,216,.2))}
+.hcard:nth-child(2){background:linear-gradient(to bottom right,rgb(19,20,22),rgba(200,189,255,.3))}
+.hcard:nth-child(3){background:linear-gradient(to bottom right,rgb(19,20,22),rgba(200,203,208,.3),rgba(200,189,255,.2))}
+.hcard:nth-child(4){background:linear-gradient(to bottom right,rgba(232,223,216,.4),rgba(227,175,53,.2))}
+.hcard-lbl{position:absolute;bottom:12px;left:12px;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45)}
+.hcard:nth-child(1) .hcard-lbl,.hcard:nth-child(4) .hcard-lbl{color:rgba(19,20,22,.3)}
+
+/* MARQUEE */
+.marquee-wrap{background:var(--dark);overflow:hidden;padding:14px 0}
+.marquee-track{display:flex;gap:2rem;animation:marquee 22s linear infinite;width:max-content}
+.marquee-item{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);white-space:nowrap;display:flex;align-items:center;gap:2rem}
+.marquee-item::after{content:'◆';font-size:6px;opacity:.5}
+
+/* SECTIONS */
+section{padding:var(--py) var(--px)}
+section.dark{background:var(--dark);color:#fff}
+section.beige{background:var(--muted-bg-30)}
+.sec-inner{max-width:var(--mw);margin:0 auto}
+.stag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+.stag.light{color:rgba(255,255,255,.4)}
+.stag::before{content:'';width:20px;height:1px;background:currentColor;display:block}
+h2{font-size:48px;font-weight:700;letter-spacing:-.96px;line-height:1;margin-bottom:16px}
+h2.light{color:#fff}
+h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--gold)}
+.sdesc{font-size:16px;color:var(--muted);line-height:1.7;max-width:52ch;margin-bottom:48px}
+.sdesc.light{color:rgba(255,255,255,.5)}
+
+/* WHY GRID */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.wcard{background:var(--card);border-radius:16px;padding:32px;box-shadow:var(--shadow-soft);transition:box-shadow .3s,transform .3s;cursor:default}
+.wcard:hover{box-shadow:var(--shadow-strong);transform:translateY(-3px)}
+.wcard-icon{width:48px;height:48px;border-radius:12px;background:linear-gradient(to bottom right,var(--fg),rgba(200,189,255,.3));display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:22px}
+.wcard-num{font-family:var(--mono);font-size:11px;color:var(--gold);letter-spacing:.1em;margin-bottom:12px}
+.wcard h3{font-size:20px;font-weight:600;letter-spacing:-.4px;margin-bottom:10px}
+.wcard p{font-size:14px;line-height:1.7;color:var(--muted)}
+
+/* BA */
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+.ba-card{border-radius:16px;overflow:hidden;position:relative;box-shadow:var(--shadow-soft)}
+.ba-img{height:280px;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase}
+.ba-img.before{background:linear-gradient(135deg,var(--muted-bg),rgba(200,203,208,.5));color:var(--muted)}
+.ba-img.after{background:linear-gradient(135deg,rgb(19,20,22),rgba(200,189,255,.4));color:rgba(255,255,255,.6)}
+.ba-badge{position:absolute;top:14px;left:14px;font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:4px 12px;border-radius:9999px}
+.ba-badge.before{background:rgba(255,255,255,.85);color:var(--muted)}
+.ba-badge.after{background:var(--gold);color:var(--fg)}
+
+/* FEATURES */
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-top:40px;box-shadow:var(--shadow-soft)}
+.feat-item{display:flex;align-items:flex-start;gap:14px;padding:22px 28px;border-bottom:1px solid var(--border);border-right:1px solid var(--border);background:var(--card);transition:background .2s}
+.feat-item:hover{background:var(--muted-bg-30)}
+.feat-item:nth-child(even){border-right:none}
+.feat-item:nth-last-child(-n+2){border-bottom:none}
+.feat-check{width:22px;height:22px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--fg);font-size:12px;font-weight:700;flex-shrink:0;margin-top:1px}
+.feat-text{font-size:14px;line-height:1.6;color:var(--fg);font-weight:500}
+
+/* PORTFOLIO */
+.port-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:280px 200px;gap:12px;margin-top:40px}
+.pcard{border-radius:16px;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:center;transition:transform .3s}
+.pcard:hover{transform:scale(1.02)}
+.pcard:first-child{grid-row:span 2}
+.pcard-lbl{position:absolute;bottom:14px;left:14px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.pcard:nth-child(1){background:linear-gradient(to bottom right,rgb(19,20,22),rgba(200,189,255,.35))}
+.pcard:nth-child(2){background:linear-gradient(to bottom right,rgb(19,20,22),rgba(227,175,53,.3))}
+.pcard:nth-child(3){background:linear-gradient(to bottom right,rgb(25,25,30),rgba(200,203,208,.3))}
+.pcard:nth-child(4){background:linear-gradient(to bottom right,rgb(20,18,18),rgba(200,189,255,.25))}
+.pcard:nth-child(5){background:linear-gradient(to bottom right,rgb(18,20,18),rgba(227,175,53,.25))}
+
+/* PROCESS */
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);margin-top:48px}
+.pstep{border-top:2px solid var(--border);padding:28px 24px 28px 0}
+.pstep-num{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--gold);letter-spacing:.1em;margin-bottom:16px}
+.pstep h3{font-size:18px;font-weight:600;letter-spacing:-.36px;margin-bottom:10px}
+.pstep p{font-size:14px;line-height:1.7;color:var(--muted)}
+
+/* TESTIMONIALS */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.tcard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:32px;transition:background .3s}
+.tcard:hover{background:rgba(255,255,255,.07)}
+.tstars{display:flex;gap:3px;margin-bottom:18px;color:var(--gold);font-size:14px}
+.ttext{font-family:var(--serif);font-size:16px;font-style:italic;line-height:1.65;color:rgba(255,255,255,.9);margin-bottom:22px}
+.tauthor{display:flex;align-items:center;gap:12px}
+.tavatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold),rgba(200,189,255,.8));display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--fg)}
+.tname{font-size:14px;font-weight:600;color:#fff}
+.trole{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.05em}
+
+/* BOOK */
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.book-h2{font-size:48px;font-weight:700;letter-spacing:-.96px;line-height:1.05;margin-bottom:18px}
+.book-h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--gold)}
+.book-desc{font-size:16px;color:var(--muted);line-height:1.7;margin-bottom:28px}
+.book-bullets{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:36px}
+.book-bullets li{display:flex;align-items:center;gap:10px;font-size:15px;color:var(--fg);font-weight:500}
+.book-bullets li::before{content:'✓';width:22px;height:22px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--fg);flex-shrink:0}
+.book-box{background:var(--card);border-radius:24px;padding:40px;box-shadow:var(--shadow-strong);border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px}
+.book-box h3{font-size:22px;font-weight:700;letter-spacing:-.44px}
+.book-box p{font-size:14px;color:var(--muted);line-height:1.7}
+.book-note{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.06em}
+.book-btn-full{width:100%;justify-content:center;font-size:15px}
+
+/* FORM */
+.form-sec{padding:96px var(--px);background:var(--bg)}
+.form-wrap{max-width:680px;margin:0 auto;text-align:center}
+.form-h2{font-size:48px;font-weight:700;letter-spacing:-.96px;line-height:1;margin-bottom:14px}
+.form-h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--gold)}
+.form-sub{font-size:16px;color:var(--muted);line-height:1.7;margin-bottom:40px}
+.cform{display:grid;grid-template-columns:1fr 1fr;gap:14px;text-align:left}
+.ff{display:flex;flex-direction:column;gap:6px}
+.ff.full{grid-column:span 2}
+.ff label{font-size:13px;font-weight:500;color:var(--fg)}
+.ff input,.ff textarea{background:var(--card);border:1px solid var(--border-mid);border-radius:12px;color:var(--fg);font-family:var(--sans);font-size:14px;padding:12px 16px;outline:none;transition:border-color .2s,box-shadow .2s;resize:none;width:100%}
+.ff input:focus,.ff textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(227,175,53,.12)}
+.ff input::placeholder,.ff textarea::placeholder{color:rgba(84,89,95,.6)}
+.fcta{grid-column:span 2;margin-top:6px}
+.btn-submit{width:100%;font-family:var(--sans);font-size:15px;font-weight:600;color:var(--fg);background:var(--gold);border:none;border-radius:9999px;padding:16px 32px;cursor:pointer;transition:all .2s}
+.btn-submit:hover{background:var(--fg);color:var(--bg);transform:translateY(-1px)}
+.ffine{grid-column:span 2;font-size:12px;color:rgba(84,89,95,.5);text-align:center;line-height:1.5}
+.fsuccess{display:none;background:rgba(227,175,53,.08);border:1px solid rgba(227,175,53,.3);border-radius:16px;padding:32px;text-align:center;margin-top:20px}
+.fsuccess h3{font-size:22px;font-weight:700;margin-bottom:8px}
+.fsuccess p{font-size:15px;color:var(--muted)}
+
+/* FOOTER */
+footer{background:var(--dark);color:#fff;padding:60px var(--px) 24px}
+.footer-inner{max-width:var(--mw);margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:28px}
+.flogo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.flogo-icon{width:32px;height:32px;background:var(--gold);border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;color:var(--fg);font-size:15px;font-weight:700}
+.flogo-txt{font-size:16px;font-weight:700;letter-spacing:-.3px;color:#fff}
+.ftagline{font-size:14px;color:rgba(255,255,255,.4);line-height:1.6;max-width:28ch;margin-bottom:18px}
+.femail{font-family:var(--mono);font-size:12px;color:var(--gold);text-decoration:none;letter-spacing:.05em;transition:opacity .2s}
+.femail:hover{opacity:.7}
+.fcol-title{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:16px}
+.flinks{list-style:none;display:flex;flex-direction:column;gap:10px}
+.flinks a{font-size:14px;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s}
+.flinks a:hover{color:var(--gold)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center}
+.fcopy{font-size:13px;color:rgba(255,255,255,.25)}
+
+/* ANIM */
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+/* MOBILE */
+@media(max-width:1024px){
+:root{--px:24px}
+.hero{grid-template-columns:1fr;min-height:auto;padding-top:110px}
+h1{font-size:52px}
+.hero-visual{max-width:480px}
+.why-grid{grid-template-columns:1fr}
+.port-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+.pcard:first-child{grid-row:span 1}
+.proc-grid{grid-template-columns:1fr 1fr}
+.tgrid{grid-template-columns:1fr}
+.book-grid{grid-template-columns:1fr;gap:40px}
+.footer-top{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media(max-width:640px){
+h1{font-size:40px}
+h2{font-size:34px}
+.book-h2{font-size:34px}
+.form-h2{font-size:34px}
+.nav-links{display:none}
+.ba-grid{grid-template-columns:1fr}
+.feat-grid{grid-template-columns:1fr}
+.feat-item:nth-child(even){border-right:1px solid var(--border)}
+.feat-item:nth-last-child(-n+2){border-bottom:1px solid var(--border)}
+.feat-item:last-child{border-bottom:none}
+.cform{grid-template-columns:1fr}
+.ff.full,.fcta,.ffine{grid-column:span 1}
+.proc-grid{grid-template-columns:1fr}
+.footer-top{grid-template-columns:1fr}
+.port-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="file:///C:/Users/USER/Downloads/skai-studio-v2_2.html#" class="nav-logo">
+      <div class="nav-logo-icon">S</div>
+      <span data-en="SKAI Studio" data-es="SKAI Studio">SKAI Studio</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="file:///C:/Users/USER/Downloads/skai-studio-v2_2.html#work" data-en="Work" data-es="Trabajo">Work</a></li>
+      <li><a href="file:///C:/Users/USER/Downloads/skai-studio-v2_2.html#services" data-en="Services" data-es="Servicios">Services</a></li>
+      <li><a href="file:///C:/Users/USER/Downloads/skai-studio-v2_2.html#process" data-en="Process" data-es="Proceso">Process</a></li>
+      <li><a href="file:///C:/Users/USER/Downloads/skai-studio-v2_2.html#book" data-en="Book a Call" data-es="Agendar">Book a Call</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="lang-btn" id="langToggle">EN | ES</button>
+      <a href="file:///C:/Users/USER/Downloads/skai-studio-v2_2.html#form" class="btn-nav" data-en="Get Free Samples →" data-es="Muestras Gratis →">Get Free Samples →</a>
+    </div>
+  </div>
+</nav>
+
+<div style="background:var(--bg)">
+  <div class="hero">
+    <div>
+      <div class="eyebrow" data-en="AI-Powered Product Visuals" data-es="Visuales de Producto con IA">AI-Powered Product Visuals</div>
+      <h1>
+        <span data-en="Your Products." data-es="Tus Productos.">Your Products.</span><br>
+        <span data-en="Studio Quality." data-es="Calidad de Estudio.">Studio Quality.</span><br>
+        <span class="serif-em" data-en="No Studio." data-es="Sin Estudio.">No Studio.</span>
+      </h1>
+      <p class="hero-sub" data-en="Stop wasting $3,000 on photo shoots. SKAI delivers magazine-grade product images in 48 hours — powered by AI, built to convert." data-es="Deja de gastar $3,000 en sesiones de fotos. SKAI entrega imágenes de calidad editorial en 48 horas — impulsado por IA, diseñado para convertir.">Stop wasting $3,000 on photo shoots. SKAI delivers magazine-grade product images in 48 hours — powered by AI, built to convert.</p>
+      <div class="btns">
+        <a href="file:///C:/Users/USER/Downloads/skai-studio-v2_2.html#form" class="btn-primary" data-en="Get 3 Free Images →" data-es="3 Imágenes Gratis →">Get 3 Free Images →</a>
+        <a href="file:///C:/Users/USER/Downloads/skai-studio-v2_2.html#work" class="btn-outline" data-en="See the work ↓" data-es="Ver el trabajo ↓">See the work ↓</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hcard">
+        <svg width="65" height="125" viewBox="0 0 65 125" style="opacity:.65">
+          <rect x="20" y="14" width="25" height="92" rx="12" fill="rgba(200,189,255,.7)"></rect>
+          <rect x="26" y="7" width="13" height="9" rx="3" fill="rgba(200,189,255,.9)"></rect>
+          <ellipse cx="32" cy="60" rx="8" ry="8" fill="rgba(255,255,255,.3)"></ellipse>
+        </svg>
+        <div class="hcard-lbl" data-en="Skincare" data-es="Cuidado">Skincare</div>
+      </div>
+      <div class="hcard">
+        <svg width="75" height="75" viewBox="0 0 75 75" style="opacity:.6">
+          <rect x="11" y="11" width="53" height="53" rx="6" fill="rgba(200,189,255,.65)" transform="rotate(14 37 37)"></rect>
+          <rect x="21" y="21" width="33" height="33" rx="4" fill="rgba(255,255,255,.2)" transform="rotate(14 37 37)"></rect>
+        </svg>
+        <div class="hcard-lbl" data-en="Packaging" data-es="Empaque">Packaging</div>
+      </div>
+      <div class="hcard">
+        <svg width="75" height="75" viewBox="0 0 75 75" style="opacity:.55">
+          <circle cx="37" cy="37" r="28" fill="rgba(200,203,208,.7)"></circle>
+          <circle cx="37" cy="37" r="17" fill="rgba(255,255,255,.25)"></circle>
+          <circle cx="37" cy="37" r="7" fill="rgba(200,203,208,.9)"></circle>
+        </svg>
+        <div class="hcard-lbl" data-en="Accessories" data-es="Accesorios">Accessories</div>
+      </div>
+      <div class="hcard">
+        <svg width="85" height="56" viewBox="0 0 85 56" style="opacity:.6">
+          <rect x="8" y="14" width="69" height="30" rx="4" fill="rgba(227,175,53,.7)"></rect>
+          <rect x="17" y="6" width="51" height="11" rx="2" fill="rgba(227,175,53,.5)"></rect>
+          <rect x="24" y="46" width="11" height="7" fill="rgba(227,175,53,.4)"></rect>
+          <rect x="50" y="46" width="11" height="7" fill="rgba(227,175,53,.4)"></rect>
+        </svg>
+        <div class="hcard-lbl" data-en="Food &amp; Bev" data-es="Alimentos">Food &amp; Bev</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span class="marquee-item">AI Product Photography</span>
+    <span class="marquee-item">No Models Required</span>
+    <span class="marquee-item">48hr Turnaround</span>
+    <span class="marquee-item">Unlimited Iterations</span>
+    <span class="marquee-item">E-commerce Ready</span>
+    <span class="marquee-item">Social Media Assets</span>
+    <span class="marquee-item">AI Product Photography</span>
+    <span class="marquee-item">No Models Required</span>
+    <span class="marquee-item">48hr Turnaround</span>
+    <span class="marquee-item">Unlimited Iterations</span>
+    <span class="marquee-item">E-commerce Ready</span>
+    <span class="marquee-item">Social Media Assets</span>
+  </div>
+</div>
+
+<section id="services">
+  <div class="sec-inner">
+    <div class="stag" data-en="Why brands choose us" data-es="Por qué las marcas nos eligen">Why brands choose us</div>
+    <h2><em data-en="Why 100+ Brands" data-es="Por qué 100+ Marcas">Why 100+ Brands</em><br><span data-en="Switched to SKAI" data-es="Eligieron SKAI">Switched to SKAI</span></h2>
+    <p class="sdesc" data-en="Faster, cheaper, better. The math is simple — and the results speak for themselves." data-es="Más rápido, más barato, mejor. La matemática es simple y los resultados hablan por sí solos.">Faster, cheaper, better. The math is simple — and the results speak for themselves.</p>
+    <div class="why-grid">
+      <div class="wcard fade-up">
+        <div class="wcard-icon">📸</div>
+        <div class="wcard-num">01</div>
+        <h3 data-en="Studio Quality" data-es="Calidad de Estudio">Studio Quality</h3>
+        <p data-en="Professional product images indistinguishable from a $5,000 shoot. Without the $5,000." data-es="Imágenes de producto profesionales indistinguibles de una sesión de $5,000. Sin los $5,000.">Professional product images indistinguishable from a $5,000 shoot. Without the $5,000.</p>
+      </div>
+      <div class="wcard fade-up d1">
+        <div class="wcard-icon">⚡</div>
+        <div class="wcard-num">02</div>
+        <h3 data-en="10x Faster" data-es="10 Veces Más Rápido">10x Faster</h3>
+        <p data-en="Traditional shoot: 2 weeks. SKAI: 48 hours. Same result, fraction of the cost." data-es="Sesión tradicional: 2 semanas. SKAI: 48 horas. Mismo resultado, fracción del costo.">Traditional shoot: 2 weeks. SKAI: 48 hours. Same result, fraction of the cost.</p>
+      </div>
+      <div class="wcard fade-up d2">
+        <div class="wcard-icon">📈</div>
+        <div class="wcard-num">03</div>
+        <h3 data-en="Higher Conversions" data-es="Más Conversiones">Higher Conversions</h3>
+        <p data-en="Better visuals = more trust = more sales. Our clients see an average 30% lift in click-through after switching." data-es="Mejores visuales = más confianza = más ventas. Nuestros clientes ven un 30% más de clics.">Better visuals = more trust = more sales. Our clients see an average 30% lift in click-through after switching.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="beige">
+  <div class="sec-inner fade-up">
+    <div class="stag" data-en="See the difference" data-es="Mira la diferencia">See the difference</div>
+    <h2><span data-en="From Product Photo to" data-es="De Foto de Producto a">From Product Photo to</span> <em data-en="Perfect Shot." data-es="Imagen Perfecta.">Perfect Shot.</em></h2>
+    <p class="sdesc" data-en="Send us your product reference — we handle the rest." data-es="Envíanos tu referencia de producto — nosotros nos encargamos del resto.">Send us your product reference — we handle the rest.</p>
+    <div class="ba-grid">
+      <div class="ba-card">
+        <div class="ba-img before" data-en="Your original photo" data-es="Tu foto original">Your original photo</div>
+        <div class="ba-badge before" data-en="Before" data-es="Antes">Before</div>
+      </div>
+      <div class="ba-card">
+        <div class="ba-img after" data-en="SKAI Enhanced" data-es="SKAI Mejorado">SKAI Enhanced</div>
+        <div class="ba-badge after" data-en="SKAI Enhanced" data-es="SKAI Mejorado">SKAI Enhanced</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-inner fade-up">
+    <div class="stag" data-en="Everything included" data-es="Todo incluido">Everything included</div>
+    <h2><span data-en="Everything You Need." data-es="Todo lo que Necesitas.">Everything You Need.</span><br><em data-en="Nothing You Don&#39;t." data-es="Nada que No.">Nothing You Don't.</em></h2>
+    <div class="feat-grid">
+      <div class="feat-item"><div class="feat-check">✓</div><span class="feat-text" data-en="Remove backgrounds instantly — one click, done" data-es="Elimina fondos al instante — un clic, listo">Remove backgrounds instantly — one click, done</span></div>
+      <div class="feat-item"><div class="feat-check">✓</div><span class="feat-text" data-en="Perfect lighting on every single shot" data-es="Iluminación perfecta en cada toma">Perfect lighting on every single shot</span></div>
+      <div class="feat-item"><div class="feat-check">✓</div><span class="feat-text" data-en="Any scene, any setting, any mood" data-es="Cualquier escena, entorno o ambiente">Any scene, any setting, any mood</span></div>
+      <div class="feat-item"><div class="feat-check">✓</div><span class="feat-text" data-en="Consistent brand aesthetic across your catalog" data-es="Estética de marca consistente en tu catálogo">Consistent brand aesthetic across your catalog</span></div>
+      <div class="feat-item"><div class="feat-check">✓</div><span class="feat-text" data-en="Zero equipment or studio costs" data-es="Cero costos de equipo o estudio">Zero equipment or studio costs</span></div>
+      <div class="feat-item"><div class="feat-check">✓</div><span class="feat-text" data-en="Unlimited revisions until you love it" data-es="Revisiones ilimitadas hasta que lo ames">Unlimited revisions until you love it</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="work" style="padding:96px var(--px)">
+  <div class="sec-inner">
+    <div class="stag light" data-en="Selected work" data-es="Trabajo seleccionado">Selected work</div>
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:40px;flex-wrap:wrap;gap:16px">
+      <h2 class="light"><span data-en="Visuals that" data-es="Visuales que">Visuals that</span><br><em data-en="convert." data-es="convierten.">convert.</em></h2>
+      <a href="file:///C:/Users/USER/Downloads/skai-studio-v2_2.html#form" class="btn-outline" style="color:rgba(255,255,255,.5);border-color:rgba(255,255,255,.12)" data-en="Get your free samples →" data-es="Obtén tus muestras gratis →">Get your free samples →</a>
+    </div>
+    <div class="port-grid fade-up">
+      <div class="pcard">
+        <svg width="85" height="152" viewBox="0 0 85 152" style="opacity:.6">
+          <rect x="26" y="16" width="33" height="112" rx="16" fill="rgba(200,189,255,.6)"></rect>
+          <rect x="33" y="8" width="19" height="10" rx="4" fill="rgba(200,189,255,.8)"></rect>
+          <ellipse cx="42" cy="72" rx="10" ry="10" fill="rgba(255,255,255,.2)"></ellipse>
+        </svg>
+        <div class="pcard-lbl" data-en="Skincare — Tribeca Media" data-es="Skincare — Tribeca Media">Skincare — Tribeca Media</div>
+      </div>
+      <div class="pcard">
+        <svg width="65" height="65" viewBox="0 0 65 65" style="opacity:.55">
+          <rect x="7" y="7" width="51" height="51" rx="5" fill="rgba(227,175,53,.6)" transform="rotate(14 32 32)"></rect>
+        </svg>
+        <div class="pcard-lbl" data-en="Packaging — Cosmetics" data-es="Empaque — Cosméticos">Packaging — Cosmetics</div>
+      </div>
+      <div class="pcard">
+        <svg width="65" height="65" viewBox="0 0 65 65" style="opacity:.5">
+          <circle cx="32" cy="32" r="24" fill="rgba(200,203,208,.6)"></circle>
+          <circle cx="32" cy="32" r="13" fill="rgba(255,255,255,.2)"></circle>
+        </svg>
+        <div class="pcard-lbl" data-en="Accessories — Lifestyle" data-es="Accesorios — Lifestyle">Accessories — Lifestyle</div>
+      </div>
+      <div class="pcard">
+        <svg width="85" height="54" viewBox="0 0 85 54" style="opacity:.55">
+          <rect x="6" y="14" width="73" height="30" rx="4" fill="rgba(200,189,255,.5)"></rect>
+          <rect x="14" y="6" width="57" height="11" rx="2" fill="rgba(200,189,255,.7)"></rect>
+        </svg>
+        <div class="pcard-lbl" data-en="Food &amp; Bev — E-commerce" data-es="Alimentos — E-commerce">Food &amp; Bev — E-commerce</div>
+      </div>
+      <div class="pcard">
+        <svg width="52" height="80" viewBox="0 0 52 80" style="opacity:.55">
+          <rect x="9" y="9" width="34" height="60" rx="10" fill="rgba(227,175,53,.6)"></rect>
+          <rect x="16" y="4" width="20" height="8" rx="3" fill="rgba(227,175,53,.8)"></rect>
+        </svg>
+        <div class="pcard-lbl" data-en="Supplements — DTC" data-es="Suplementos — DTC">Supplements — DTC</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="sec-inner">
+    <div class="stag" data-en="How it works" data-es="Cómo funciona">How it works</div>
+    <h2><em data-en="Four steps" data-es="Cuatro pasos">Four steps</em><span data-en=" to perfect." data-es=" a la perfección."> to perfect.</span></h2>
+    <div class="proc-grid fade-up">
+      <div class="pstep">
+        <div class="pstep-num">01</div>
+        <h3 data-en="Send us your product" data-es="Envíanos tu producto">Send us your product</h3>
+        <p data-en="A few reference photos or brand assets. That&#39;s all we need to get started." data-es="Unas fotos de referencia o activos de marca. Eso es todo lo que necesitamos.">A few reference photos or brand assets. That's all we need to get started.</p>
+      </div>
+      <div class="pstep">
+        <div class="pstep-num">02</div>
+        <h3 data-en="We build the brief" data-es="Construimos el brief">We build the brief</h3>
+        <p data-en="We define the visual language, mood, and direction that fits your brand perfectly." data-es="Definimos el lenguaje visual y la dirección que se adapta perfectamente a tu marca.">We define the visual language, mood, and direction that fits your brand perfectly.</p>
+      </div>
+      <div class="pstep">
+        <div class="pstep-num">03</div>
+        <h3 data-en="AI generates the visuals" data-es="La IA genera los visuales">AI generates the visuals</h3>
+        <p data-en="Studio-grade imagery in a fraction of the time and cost of a traditional shoot." data-es="Imágenes de calidad de estudio en una fracción del tiempo y costo de una sesión tradicional.">Studio-grade imagery in a fraction of the time and cost of a traditional shoot.</p>
+      </div>
+      <div class="pstep">
+        <div class="pstep-num">04</div>
+        <h3 data-en="Delivered in 48 hours" data-es="Entregado en 48 horas">Delivered in 48 hours</h3>
+        <p data-en="Final files, multiple formats, ready to publish. Unlimited revision rounds included." data-es="Archivos finales, múltiples formatos, listos para publicar. Revisiones ilimitadas incluidas.">Final files, multiple formats, ready to publish. Unlimited revision rounds included.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" style="padding:96px var(--px)">
+  <div class="sec-inner">
+    <div class="stag light" data-en="Client results" data-es="Resultados de clientes">Client results</div>
+    <h2 class="light"><em data-en="Don&#39;t Take Our" data-es="No Te Fíes Solo de">Don't Take Our</em><br><span data-en="Word For It." data-es="Nuestra Palabra.">Word For It.</span></h2>
+    <div class="tgrid fade-up">
+      <div class="tcard">
+        <div class="tstars">★★★★★</div>
+        <p class="ttext" data-en="&quot;SKAI completely replaced our product photography budget. We got 40 images in 48 hours that our team could not tell apart from a real shoot.&quot;" data-es="&quot;SKAI reemplazó por completo nuestro presupuesto de fotografía. Obtuvimos 40 imágenes en 48 horas que nuestro equipo no podía distinguir de una sesión real.&quot;">"SKAI completely replaced our product photography budget. We got 40 images in 48 hours that our team couldn't tell apart from a real shoot."</p>
+        <div class="tauthor">
+          <div class="tavatar">TM</div>
+          <div><div class="tname">Tribeca Media</div><div class="trole" data-en="Marketing Director" data-es="Director de Marketing">Marketing Director</div></div>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="tstars">★★★★★</div>
+        <p class="ttext" data-en="&quot;We were spending $2,500 per shoot. Now we spend a fraction and get MORE content. This is a no-brainer for any e-commerce brand.&quot;" data-es="&quot;Gastábamos $2,500 por sesión. Ahora gastamos una fracción y obtenemos MÁS contenido. Es una decisión obvia para cualquier marca de e-commerce.&quot;">"We were spending $2,500 per shoot. Now we spend a fraction and get MORE content. This is a no-brainer for any e-commerce brand."</p>
+        <div class="tauthor">
+          <div class="tavatar">LS</div>
+          <div><div class="tname">Lumière Skincare</div><div class="trole" data-en="Founder" data-es="Fundadora">Founder</div></div>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="tstars">★★★★★</div>
+        <p class="ttext" data-en="&quot;I sent 3 reference photos on a Monday. By Wednesday I had a full campaign worth of content. Unreal.&quot;" data-es="&quot;Envié 3 fotos de referencia un lunes. El miércoles ya tenía contenido para una campaña completa. Increíble.&quot;">"I sent 3 reference photos on a Monday. By Wednesday I had a full campaign's worth of content. Unreal."</p>
+        <div class="tauthor">
+          <div class="tavatar">ND</div>
+          <div><div class="tname">NovaDTC</div><div class="trole" data-en="Head of Growth" data-es="Head of Growth">Head of Growth</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="beige" id="book" style="padding:96px var(--px)">
+  <div class="sec-inner fade-up">
+    <div class="book-grid">
+      <div>
+        <div class="stag" data-en="Zero risk" data-es="Cero riesgo">Zero risk</div>
+        <h2 class="book-h2"><em data-en="Book a Free" data-es="Agenda una">Book a Free</em><br><span data-en="15-Min Call." data-es="Llamada Gratis.">15-Min Call.</span></h2>
+        <p class="book-desc" data-en="No pitch. No pressure. Just show us your product and we&#39;ll show you exactly what SKAI can create for your brand." data-es="Sin presentación. Sin presión. Solo muéstranos tu producto y te mostraremos exactamente lo que SKAI puede crear para tu marca.">No pitch. No pressure. Just show us your product and we'll show you exactly what SKAI can create for your brand.</p>
+        <ul class="book-bullets">
+          <li data-en="See real examples from your industry" data-es="Ve ejemplos reales de tu industria">See real examples from your industry</li>
+          <li data-en="Get a custom quote on the spot" data-es="Obtén una cotización personalizada al instante">Get a custom quote on the spot</li>
+          <li data-en="Walk away with a free sample offer" data-es="Llévate una oferta de muestra gratuita">Walk away with a free sample offer</li>
+        </ul>
+      </div>
+      <div class="book-box">
+        <div style="font-size:48px">📅</div>
+        <h3 data-en="Schedule Your Call" data-es="Agenda tu Llamada">Schedule Your Call</h3>
+        <p data-en="Pick a time that works for you — slots available within 24 hours. Completely free, no strings attached." data-es="Elige el horario que te convenga — espacios disponibles en 24 horas. Completamente gratis, sin compromisos.">Pick a time that works for you — slots available within 24 hours. Completely free, no strings attached.</p>
+        <a href="https://calendly.com/skaistudio/15min" target="_blank" class="btn-primary book-btn-full" data-en="Book Your Free Call →" data-es="Agenda tu Llamada Gratis →">Book Your Free Call →</a>
+        <p class="book-note" data-en="15 minutes · Zoom or Google Meet · No commitment" data-es="15 minutos · Zoom o Google Meet · Sin compromiso">15 minutes · Zoom or Google Meet · No commitment</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="form-sec" id="form">
+  <div class="form-wrap">
+    <div class="stag" style="justify-content:center" data-en="No credit card required" data-es="Sin tarjeta de crédito">No credit card required</div>
+    <h2 class="form-h2"><em data-en="Get 3 Free" data-es="Obtén 3 Imágenes">Get 3 Free</em><br><span data-en="Product Images." data-es="Gratis.">Product Images.</span></h2>
+    <p class="form-sub" data-en="No credit card. No commitment. Send us your product, we send back studio-grade AI images within 48 hours. If you don&#39;t love them, you owe us nothing." data-es="Sin tarjeta de crédito. Sin compromiso. Envíanos tu producto, te enviamos imágenes de IA de calidad de estudio en 48 horas. Si no te encantan, no nos debes nada.">No credit card. No commitment. Send us your product, we send back studio-grade AI images within 48 hours. If you don't love them, you owe us nothing.</p>
+    <form class="cform" id="contactForm">
+      <div class="ff"><label data-en="Full Name" data-es="Nombre Completo">Full Name</label><input type="text" placeholder="Jane Smith" required=""></div>
+      <div class="ff"><label data-en="Email Address" data-es="Correo Electrónico">Email Address</label><input type="email" placeholder="jane@brand.com" required=""></div>
+      <div class="ff"><label data-en="WhatsApp Number" data-es="Número de WhatsApp">WhatsApp Number</label><input type="tel" placeholder="+1 (555) 000-0000"></div>
+      <div class="ff"><label data-en="Brand / Company" data-es="Marca / Empresa">Brand / Company</label><input type="text" placeholder="Your brand name"></div>
+      <div class="ff full"><label data-en="Tell us about your product" data-es="Cuéntanos sobre tu producto">Tell us about your product</label><textarea rows="3" placeholder="What&#39;s the product? What vibe are you going for?"></textarea></div>
+      <div class="fcta"><button type="submit" class="btn-submit" data-en="Send Me My Free Images →" data-es="Envíame Mis Imágenes Gratis →">Send Me My Free Images →</button></div>
+      <p class="ffine" data-en="By submitting you agree to our Terms &amp; Privacy Policy." data-es="Al enviar aceptas nuestros Términos y Política de Privacidad.">By submitting you agree to our Terms &amp; Privacy Policy.</p>
+    </form>
+    <div class="fsuccess" id="formSuccess">
+      <h3>🎉 <span data-en="You&#39;re in!" data-es="¡Estás dentro!">You're in!</span></h3>
+      <p data-en="We&#39;ll be in touch within 24 hours with your free images." data-es="Te contactaremos en menos de 24 horas con tus imágenes gratis.">We'll be in touch within 24 hours with your free images.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="flogo">
+          <div class="flogo-icon">S</div>
+          <span class="flogo-txt">SKAI Studio</span>
+        </div>
+        <p class="ftagline" data-en="Where great products meet perfect visuals. Powered by AI." data-es="Donde los grandes productos se encuentran con los visuales perfectos. Impulsado por IA.">Where great products meet perfect visuals. Powered by AI.</p>
+        <a href="mailto:hello@skaistudio.com" class="femail">hello@skaistudio.com</a>
+      </div>
+      <div>
+        <p class="fcol-title" data-en="Navigate" data-es="Navegar">Navigate</p>
+        <ul class="flinks">
+          <li><a href="file:///C:/Users/USER/Downloads/skai-studio-v2_2.html#work" data-en="Work" data-es="Trabajo">Work</a></li>
+          <li><a href="file:///C:/Users/USER/Downloads/skai-studio-v2_2.html#services" data-en="Services" data-es="Servicios">Services</a></li>
+          <li><a href="file:///C:/Users/USER/Downloads/skai-studio-v2_2.html#process" data-en="Process" data-es="Proceso">Process</a></li>
+          <li><a href="file:///C:/Users/USER/Downloads/skai-studio-v2_2.html#book" data-en="Book a Call" data-es="Agendar Llamada">Book a Call</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="fcol-title" data-en="Legal" data-es="Legal">Legal</p>
+        <ul class="flinks">
+          <li><a href="file:///C:/Users/USER/Downloads/skai-studio-v2_2.html#" data-en="Privacy Policy" data-es="Política de Privacidad">Privacy Policy</a></li>
+          <li><a href="file:///C:/Users/USER/Downloads/skai-studio-v2_2.html#" data-en="Terms of Service" data-es="Términos de Servicio">Terms de Servicio"&gt;Terms of Service</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="fcol-title" data-en="Connect" data-es="Conectar">Connect</p>
+        <ul class="flinks">
+          <li><a href="file:///C:/Users/USER/Downloads/skai-studio-v2_2.html#">Instagram</a></li>
+          <li><a href="file:///C:/Users/USER/Downloads/skai-studio-v2_2.html#">LinkedIn</a></li>
+          <li><a href="mailto:hello@skaistudio.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="fcopy" data-en="© 2026 SKAI Studio. All rights reserved." data-es="© 2026 SKAI Studio. Todos los derechos reservados.">© 2026 SKAI Studio. All rights reserved.</p>
+      <p class="fcopy" data-en="AI-powered product photography" data-es="Fotografía de producto con IA">AI-powered product photography</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>50)});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+let lang='en';
+document.getElementById('langToggle').addEventListener('click',()=>{
+  lang=lang==='en'?'es':'en';
+  document.getElementById('langToggle').textContent=lang==='en'?'EN | ES':'ES | EN';
+  document.querySelectorAll('[data-en]').forEach(el=>{const v=el.getAttribute('data-'+lang);if(v)el.innerHTML=v});
+});
+document.getElementById('contactForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  document.getElementById('contactForm').style.display='none';
+  document.getElementById('formSuccess').style.display='block';
+});
+</script>
+
+
+</body></html>
